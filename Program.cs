@@ -38,10 +38,7 @@ postre1.MostrarDetalles();
 
 //Producto producto1 = new Producto("Entrante",15m, ["Lechuga, carne"] );
 
-List<Producto> combo = new ();// = [platoPrincipal1, bebida1, postre1];
-combo.Add(platoPrincipal1);
-combo.Add(bebida1);
-combo.Add(postre1);
+List<Producto> combo = [platoPrincipal1, bebida1, postre1];
 
 
 Console.WriteLine(combo);
@@ -52,7 +49,6 @@ foreach (Producto producto in combo)
     Console.WriteLine(producto.Nombre + "-" + producto.Precio);
     producto.MostrarDetalles();
 }
-//platoPrincipal1.CalcularPrecio();
 
 
 Combo combo1 = new Combo("menú del dia", platoPrincipal1, bebida1, postre1);
