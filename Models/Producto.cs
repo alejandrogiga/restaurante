@@ -20,7 +20,7 @@ public abstract class Producto
         Ingredientes = ingredientes;
     }
 
-    public void ShowDesc()
+    public void MostrarDetalles()
     {
        // Console.WriteLine("Name: " + this.Name + " - " + "Price: " + this.Price);
         Console.WriteLine($"Name: {this.Nombre} - Price: {this.Precio:F2}");

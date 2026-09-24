@@ -2,14 +2,39 @@
 using Models;
 
 PlatoPrincipal platoPrincipal1 = new PlatoPrincipal("Pizza", 12, ["Tomate", "Queso"]);
-platoPrincipal1.ShowDesc();
+platoPrincipal1.MostrarDetalles();
 
 Bebida bebida1 = new Bebida("Cocacola", 8.5m, ["Cafeina", "Limón"], false);
-bebida1.ShowDesc();
+bebida1.MostrarDetalles();
 
+bebida1.PorcentajeDescuento = 10;
+
+decimal descuento =
+    bebida1.CalcularDescuento();
+
+Console.WriteLine(descuento);
+
+
+Bebida cerveza =
+    new Bebida(
+        "Cerveza",
+        4m,
+        [""],
+        true
+    );
+
+cerveza.Alergenos.Add("Gluten");
+cerveza.Alergenos.Add("Sulfitos");
+Console.WriteLine(
+      cerveza.ContieneAlergeno("Gluten")
+);
+
+Console.WriteLine(
+    cerveza.ContieneAlergeno("Lactosa")
+);
 
 Postre postre1 = new Postre("Tarta de queso", 12.45m, ["Leche", "Queso", "Huevos"], 300, false);
-postre1.ShowDesc();
+postre1.MostrarDetalles();
 
 //Producto producto1 = new Producto("Entrante",15m, ["Lechuga, carne"] );
 
@@ -25,7 +50,7 @@ foreach (Producto producto in combo)
 {
     Console.WriteLine(producto);
     Console.WriteLine(producto.Nombre + "-" + producto.Precio);
-    producto.ShowDesc();
+    producto.MostrarDetalles();
 }
 //platoPrincipal1.CalcularPrecio();
 
@@ -41,3 +66,6 @@ Console.WriteLine(combo1.PrecioConDescuento());
 decimal cantidadDescontada = combo1.CalcularDescuento();
 Console.WriteLine("End");
 
+
+var menuApp = new MenuApp();
+menuApp.MostrarMenu();
