@@ -63,7 +63,7 @@ Console.WriteLine(p1.Precio);
 
 Console.WriteLine(combo1.PrecioConDescuento());
 decimal cantidadDescontada = combo1.CalcularDescuento();
-Console.WriteLine("End");
+Console.WriteLine("Bye");
 
 
 var menuApp = new MenuApp();
